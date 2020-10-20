@@ -13,5 +13,14 @@ My code for this task is in 'Task 2 - A Sample of Owners.ipynb' and the file tha
 I again connected to my project in GBQ and ran a query to pull all the owners using "card_no" and remove the non-owners who were recorded under card_no 3. I then used the random() function to pull a sample of owners from the total card_no and wrote this sample to 'owner_transactions.txt' which I will use to complete task 3. 
 
 
+## Feedback
 
+Parts 1 & 2 look good. A couple of small changes to make on your final commit: 
+
+* Keep your lines to under about 80 characters width. For instance, Cell 4 on `Wedge Cleaning Code`
+has some comments that are wrapping to the next line in the GitHub view. 
+* Not a big deal, but re-run Task 2 code (or just clear output) so that the list of owners
+isn't printed to the screen.
+
+Good luck with Part 3, let me know when you've pushed it. 
 
