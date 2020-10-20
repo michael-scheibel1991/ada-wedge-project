@@ -5,29 +5,43 @@
 
 <!-- Any general commentary you'd like to say about the project --> 
 
+I am currently turning in Task 1 and Tast 2 to you for review. I have filled in the Query Comparison Results below, and have some 
+slight differences on a couple of the queries. Still working on Task 3 but will update this file and ReadMe when I get that done. 
+
 ### Task 1
 
 * Files for this task: 
 <!--  List of file or files here  --> 
 
-Loads all data into GBQ data set.
+Clean ZipFiles containg Wedge data
 
-`File1 Name`: 
-Description of what this file does.
+`File1 Name`: Wedge Cleaning Final.ipynb
+
+Opened the Zip files containing the Wedge data for each month from 2010 to 2017. Cleaned the files by eliminating certain delimiters, 
+removing unwanted null values like "\\n" and adding headers to each new cleaned cloumn. Then writing the cleaned data to a new folder 
+named 'wedge_clean'.
 
 <!--  Repeat for each file  --> 
 
+Loads all data into GBQ data set.
 
+`File2 Name`: Wedge GBQ Import Code.ipynb
+
+Upload the new cleaned files to GBQ. This involed connecting to GBQ to access my project 'wedge2020' and dataset 'wedge_transactions_data'. 
+Then using a schema to create tables in that dataset, I was able to configure a GQB job to upload my local cleaned files into those tables. 
 
 ### Task 2
 
 * Files for this task: 
 <!--  List of file or files here  --> 
 
-Loads all data into GBQ data set.
+Taking a sample of owners from GBQ
 
-`File1 Name`: 
-Description of what this file does.
+`File3 Name`: Task 2 - A Sample of Owners.ipynb
+
+I again connected to my project in GBQ and ran a query to pull all the owners using "card_no" and remove the non-owners who were recorded 
+under card_no 3. I then used the random() function to pull a sample of owners from the total card_no and wrote this sample to 
+'owner_transactions.txt' which I will use to complete task 3. 
 
 <!--  Repeat for each file  --> 
 	
@@ -82,6 +96,6 @@ When calculating relative difference, use the formula
 | Fraction of Rows from Owners in that Year  |  0.7513 |  0.7513 | 0  |  0 |
 
 ## Reflections
-wedge2020.wedge_transactions_data.transArchive_*
+
 
 <!-- I'd love to get 100-200 words on your experience doing the Wedge Project --> 
