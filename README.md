@@ -29,3 +29,6 @@ isn't printed to the screen.
 
 Good luck with Part 3, let me know when you've pushed it. 
 
+## Feedback 2
+
+Nice work, this is **complete**. Great work. Part 3 was extremely clear
