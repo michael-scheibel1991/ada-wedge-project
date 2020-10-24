@@ -37,7 +37,7 @@ Then using a schema to create tables in that dataset, I was able to configure a 
 
 Taking a sample of owners from GBQ
 
-`File3 Name`: Task 2 - A Sample of Owners.ipynb
+`File1 Name`: Task 2 - A Sample of Owners.ipynb
 
 I again connected to my project in GBQ and ran a query to pull all the owners using "card_no" and remove the non-owners who were recorded 
 under card_no 3. I then used the random() function to pull a sample of owners from the total card_no and wrote this sample to 
@@ -51,10 +51,25 @@ under card_no 3. I then used the random() function to pull a sample of owners fr
 * Files for this task: 
 <!--  List of file or files here  --> 
 
-Loads all data into GBQ data set.
+`File1 Name`: Task3_Queries.txt
 
-`File1 Name`: 
-Description of what this file does.
+A text file that has the three queries I used to pull the three tables from GBQ and then exported to the following text files:
+
+`File2 Name`: sales_date_ hour.txt
+
+Text File pulled form GBQ that pulls -> Sales by date by hour: By calendar date (YYYY-MM-DD) and hour of the day, determine the total spend in the store, the number of transactions, and a count of the number of items . 
+
+`File3 Name`: sales_owner_year_month.txt
+
+Text File pulled form GBQ that pulls -> Sales by owner by year by month: A file that has the following columns: card_no, year, month, sales, transactions, and items. 
+
+`File4 Name`: sales_description_year_month.txt
+
+Text File pulled form GBQ that pulls -> Sales by product description by year by month: A file that has the following columns: upc, description, department number, department name, year, month, sales, transactions, and items.
+
+`File5 Name`: Task 3 - Building Summary Tables.ipynb
+
+The Python notebook that holds the code to create the database "wedge_task3.db" and creates three tables which will be filled with the three text files data exported from GBQ. 
 
 <!--  Repeat for each file  --> 
 

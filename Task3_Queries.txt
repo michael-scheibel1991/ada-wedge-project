@@ -1,0 +1,66 @@
+SELECT (EXTRACT(date FROM datetime)) AS Date,
+    (EXTRACT(hour FROM datetime)) AS Hour,
+    SUM(total) AS Sales,
+    COUNT(DISTINCT(Date(datetime) || register_no || emp_no || trans_no)) AS Transactions,
+    SUM(CASE WHEN(trans_status = 'V' OR trans_status = 'R') THEN -1 ELSE 1 END) as Items
+    FROM `wedge2020.wedge_transactions_data.transArchive_*` 
+    WHERE card_no != 3
+    AND department != 0
+    AND department != 15
+    AND trans_status != 'M'
+    AND trans_status != 'C'
+    AND trans_status != 'J'
+    AND (trans_status = ''
+    OR trans_status = ' '
+    OR trans_status =  'V'
+    OR trans_status = 'R')
+    GROUP BY Date, Hour
+    ORDER BY Date, Hour
+
+
+
+SELECT card_no As Owner,
+    (EXTRACT(year FROM datetime)) AS Year,
+    (EXTRACT(month FROM datetime)) AS Month,
+    SUM(total) AS Sales,
+    COUNT(DISTINCT(Date(datetime) || register_no || emp_no || trans_no)) AS Transactions,
+    SUM(CASE WHEN(trans_status = 'V' OR trans_status = 'R') THEN -1 ELSE 1 END) as Items
+    FROM `wedge2020.wedge_transactions_data.transArchive_*` 
+    WHERE card_no != 3
+    AND department != 0
+    AND department != 15
+    AND trans_status != 'M'
+    AND trans_status != 'C'
+    AND trans_status != 'J'
+    AND trans_status = ''
+    OR trans_status = ' '
+    OR trans_status =  'V'
+    OR trans_status = 'R'
+    GROUP BY Owner, Year, Month
+    ORDER BY Owner, Year, Month DESC
+
+
+SELECT Upc as UPC,
+    description AS Product,
+    a.department AS Department,
+    b.dept_name AS Dept_Name,
+    (EXTRACT(year FROM datetime)) AS Year,
+    (EXTRACT (month FROM datetime)) AS Month,
+    SUM(total) AS Sales,
+    count(distinct(date(datetime) || register_no ||emp_no || trans_no)) as Transactions,
+    sum(CASE WHEN (trans_status = 'V' or trans_status = 'R') THEN -1 ELSE 1 END) as Items,
+    FROM `wedge2020.wedge_transactions_data.transArchive_*` a
+LEFT JOIN `wedge2020.wedge_transactions_data.wedge_department_lookup` b
+    on a.department = b.department
+    WHERE card_no != 3
+    AND a.department !=0
+    AND a.department !=15
+   AND trans_status != 'M'
+    AND trans_status != 'C'
+    AND trans_status != 'J'
+    AND trans_status = ''
+    OR trans_status = ' '
+    OR trans_status = 'V'
+    OR trans_status = 'R'
+    GROUP BY UPC, Product, Department, Dept_Name, Year, Month
+    ORDER BY Sales DESC
