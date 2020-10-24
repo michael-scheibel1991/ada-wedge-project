@@ -57,19 +57,23 @@ A text file that has the three queries I used to pull the three tables from GBQ 
 
 `File2 Name`: sales_date_ hour.txt
 
-Text File pulled form GBQ that pulls -> Sales by date by hour: By calendar date (YYYY-MM-DD) and hour of the day, determine the total spend in the store, the number of transactions, and a count of the number of items . 
+Text File pulled form GBQ that pulls -> Sales by date by hour: By calendar date (YYYY-MM-DD) and hour of the day, determine the total 
+spend in the store, the number of transactions, and a count of the number of items . 
 
 `File3 Name`: sales_owner_year_month.txt
 
-Text File pulled form GBQ that pulls -> Sales by owner by year by month: A file that has the following columns: card_no, year, month, sales, transactions, and items. 
+Text File pulled form GBQ that pulls -> Sales by owner by year by month: A file that has the following columns: card_no, year, month, 
+sales, transactions, and items. 
 
 `File4 Name`: sales_description_year_month.txt
 
-Text File pulled form GBQ that pulls -> Sales by product description by year by month: A file that has the following columns: upc, description, department number, department name, year, month, sales, transactions, and items.
+Text File pulled form GBQ that pulls -> Sales by product description by year by month: A file that has the following columns: upc, 
+description, department number, department name, year, month, sales, transactions, and items.
 
 `File5 Name`: Task 3 - Building Summary Tables.ipynb
 
-The Python notebook that holds the code to create the database "wedge_task3.db" and creates three tables which will be filled with the three text files data exported from GBQ. 
+The Python notebook that holds the code to create the database "wedge_task3.db" and creates three tables which will be filled 
+with the three text files data exported from GBQ. 
 
 <!--  Repeat for each file  --> 
 
@@ -114,3 +118,9 @@ When calculating relative difference, use the formula
 
 
 <!-- I'd love to get 100-200 words on your experience doing the Wedge Project --> 
+The Wege was fairly time consuming, although mostly because of some coding mistakes I made early on 
+which made me have to run the GBQ upload multiple times. However learned quite a lot and it definelty 
+gives a good idea of what to expect from being a data scientist. I don't think I could have go through 
+this project without the workday on that Saturday, and going through it in class a couple times. So 
+not a bad project, just took a lot of time. But I did like how a lot of exercises helped with the code 
+and how it brought in all of these tools we have been using into one assignment. 
