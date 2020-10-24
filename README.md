@@ -10,7 +10,16 @@ Second part of task one was to upload these new cleaned files to GBQ using 'Wedg
 **Task 2: A Sample of Owners**
 
 My code for this task is in 'Task 2 - A Sample of Owners.ipynb' and the file that contains the sample of owners is 'owner_transactions.txt'.
+<<<<<<< HEAD
 I again connected to my project in GBQ and ran a query to pull all the owners using "card_no" and remove the non-owners who were recorded under card_no 3. I then used the random() function to pull a sample of owners from the total card_no and wrote this sample to 'owner_transactions.txt'.
+
+
+**Task 3: Building Summary Tables**
+
+For this task I put together three queries that were ran against my uploaded wedge data, and generated three tables:  Sales by date by hour, Sales by owner by year by month and Sales by product description by year by month. I then exported these table to text files locally. I then wrote Python script that created three blank tables in a new database: "wedge_task3.db" and then filled those table with the data from teh three text files I exported. 
+=======
+I again connected to my project in GBQ and ran a query to pull all the owners using "card_no" and remove the non-owners who were recorded under card_no 3. I then used the random() function to pull a sample of owners from the total card_no and wrote this sample to 'owner_transactions.txt'
+>>>>>>> 3cb22bf2fb7b16ed3efc3ebdabef3e0a7022668b
 
 
 **Task 3: Building Summary Tables**
@@ -18,5 +27,14 @@ I again connected to my project in GBQ and ran a query to pull all the owners us
 For this task I put together three queries that were ran against my uploaded wedge data, and generated three tables:  Sales by date by hour, Sales by owner by year by month and Sales by product description by year by month. I then exported these table to text files locally. I then wrote Python script that created three blank tables in a new database: "wedge_task3.db" and then filled those table with the data from teh three text files I exported. 
 
 
+## Feedback
 
+Parts 1 & 2 look good. A couple of small changes to make on your final commit: 
+
+* Keep your lines to under about 80 characters width. For instance, Cell 4 on `Wedge Cleaning Code`
+has some comments that are wrapping to the next line in the GitHub view. 
+* Not a big deal, but re-run Task 2 code (or just clear output) so that the list of owners
+isn't printed to the screen.
+
+Good luck with Part 3, let me know when you've pushed it. 
 
